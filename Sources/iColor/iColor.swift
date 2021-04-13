@@ -1,9 +1,11 @@
 import SwiftUI
 
+#if arch(arm64)
 @available(watchOS 6.0, *)
 @available(OSX 10.15, *)
 @available(iOS 13.0, *)
 @available(tvOS 13.0, *)
+
 public extension Color {
     
     static let neonRed:        Color = Color(hue: 0/360,   saturation: 0.65, brightness: 1.00)
@@ -108,3 +110,4 @@ fileprivate extension Comparable {
         return self.clamp(range.lowerBound, range.upperBound)
     }
 }
+#endif
